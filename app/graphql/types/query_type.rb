@@ -5,17 +5,19 @@ module Types
       null: false,
       description: "Returns a list of all tweets"
 
-    field :users,
-      [Types::UserType],
+    field :user,
+      Types::UserType,
       null: false,
-      description: "Returns a list of all users"
+      description: "Returns a list of all users" do
+        argument :id, ID, required: true
+      end
 
     def tweets
       Tweet.all
     end
 
-    def users
-      User.all
+    def user(id:)
+      User.find(id)
     end
   end
 end
