@@ -4,6 +4,5 @@ module Types
     field :content, String, null: false
     field :userId, ID, null: false
     field :createdAt, GraphQL::Types::ISO8601DateTime, null: false
-    field :user, Types::UserType, null: false
   end
 end
