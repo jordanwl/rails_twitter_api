@@ -16,6 +16,14 @@ module Types
       Tweet.all
     end
 
+    def tweet(id:)
+      Tweet.find(id)
+    end
+
+    def users
+      User.all
+    end
+
     def user(id:)
       User.find(id)
     end
